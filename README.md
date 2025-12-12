@@ -118,13 +118,13 @@ npx wrangler versions upload
 ## 📚 文档 / Documentation
 
 **中文**:
-- [⭐ 开发指南](docs/DEVELOPMENT_GUIDE.md) - **必读**
-- [部署教程](docs/DEPLOY_TUTORIAL.md)
+- [⭐ 本地开发指南](docs/LOCAL_DEVELOPMENT.md) - **必读**
+- [生产部署教程](docs/PRODUCTION_DEPLOY.md)
 - [Blog 示例模块](docs/blog/)
 
 **English**:
-- [⭐ Development Guide](docs/en/DEVELOPMENT_GUIDE.md) - **Must Read**
-- [Deployment Tutorial](docs/en/DEPLOY_TUTORIAL.md)
+- [⭐ Local Development Guide](docs/en/LOCAL_DEVELOPMENT.md) - **Must Read**
+- [Production Deployment Tutorial](docs/en/PRODUCTION_DEPLOY.md)
 
 ## 📄 License
 
