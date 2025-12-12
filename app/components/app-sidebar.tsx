@@ -200,7 +200,7 @@ export function AppSidebar({ user, t, theme, setTheme, language, setLanguage }: 
                                     </DropdownMenuSubTrigger>
                                     <DropdownMenuPortal>
                                         <DropdownMenuSubContent>
-                                            {(['en', 'zh-CN', 'zh-TW', 'ja'] as Language[]).map(lang => (
+                                            {(['en', 'fr', 'es', 'zh-CN', 'zh-TW', 'ja', 'ko'] as Language[]).map(lang => (
                                                 <DropdownMenuItem
                                                     key={lang}
                                                     onClick={() => setLanguage(lang)}
