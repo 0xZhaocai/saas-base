@@ -5,12 +5,22 @@ import tailwindcss from "@tailwindcss/vite";
 import tsconfigPaths from "vite-tsconfig-paths"; // 关键点 1：引入这个插件
 
 const prebundleDeps = [
+  // React 核心
   "react",
   "react-dom",
   "react-router",
   "react-router/dom",
   "react/jsx-runtime",
   "react/jsx-dev-runtime",
+  // Radix UI 核心组件
+  "@radix-ui/react-avatar",
+  "@radix-ui/react-dialog",
+  "@radix-ui/react-dropdown-menu",
+  "@radix-ui/react-label",
+  "@radix-ui/react-separator",
+  "@radix-ui/react-slot",
+  "@radix-ui/react-tooltip",
+  // 其他常用依赖
   "isbot",
   "zod",
   "sonner",
@@ -18,6 +28,9 @@ const prebundleDeps = [
   "clsx",
   "tailwind-merge",
   "lucide-react",
+  "nanoid",
+  "better-auth/client",
+  "better-auth/react",
 ];
 
 export default defineConfig(() => ({
