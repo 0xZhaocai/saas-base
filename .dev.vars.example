@@ -1,0 +1,52 @@
+# ===========================================
+# Cloudflare Workers 环境变量配置
+# ===========================================
+# 复制此文件到 .dev.vars 并填写实际值
+# cp .dev.vars.example .dev.vars
+#
+# 本地开发: 使用 .dev.vars 文件
+# 生产环境: 在 Cloudflare Dashboard 设置 Secrets
+# ===========================================
+
+# -------------------------------------------
+# Better-Auth 认证配置
+# -------------------------------------------
+
+# 认证密钥 (用于签名 token，生成命令: openssl rand -base64 32)
+BETTER_AUTH_SECRET=your-secret-key-here
+
+# 应用 URL (本地开发)
+BETTER_AUTH_URL=http://localhost:5173
+
+# -------------------------------------------
+# 邮件服务 (Resend)
+# -------------------------------------------
+
+# Resend API 密钥 (从 https://resend.com 获取)
+RESEND_API_KEY=re_xxxxxxxxxx
+
+# 发件人邮箱 (需在 Resend 中验证域名)
+RESEND_FROM_EMAIL=noreply@yourdomain.com
+
+# -------------------------------------------
+# Google OAuth (可选)
+# -------------------------------------------
+
+# 从 https://console.cloud.google.com 获取
+# 1. 创建 OAuth 2.0 凭据
+# 2. 添加重定向 URI: http://localhost:5173/api/auth/callback/google
+GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+
+# -------------------------------------------
+# 生产环境配置说明
+# -------------------------------------------
+# 部署到 Cloudflare Workers 时:
+# 1. 进入 Cloudflare Dashboard -> Workers -> 你的 Worker
+# 2. Settings -> Variables -> Environment Variables
+# 3. 添加上述变量为 "Encrypted" (Secret)
+#
+# 或使用 CLI:
+# wrangler secret put BETTER_AUTH_SECRET
+# wrangler secret put RESEND_API_KEY
+# ...

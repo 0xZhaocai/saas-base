@@ -1,0 +1,36 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	// Worker name. New projects should change this.
+	"name": "base-saas",
+	"main": "workers/app.ts",
+	"compatibility_date": "2024-09-23",
+	"compatibility_flags": [
+		"nodejs_compat_v2"
+	],
+	"assets": {
+		"directory": "./build/client"
+	},
+ "placement": {
+    "mode": "smart"
+  },
+  "vars": {
+    // Production URL of your app. Local dev overrides this via `.dev.vars`.
+    "BETTER_AUTH_URL": "https://your-app.example.workers.dev"
+  },
+	"r2_buckets": [
+		{
+			"binding": "AVATAR_BUCKET",
+			// Replace with your R2 bucket name.
+			"bucket_name": "your-avatar-bucket"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			// Replace with your D1 database name/id.
+			// This default name works for local dev. New projects may change it.
+			"database_name": "base-saas-db",
+			"database_id": "your-db-id"
+		}
+	]
+}

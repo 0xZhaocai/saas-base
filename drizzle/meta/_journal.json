@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1765070372810,
+      "tag": "0000_oval_juggernaut",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1765075093086,
+      "tag": "0001_first_firebrand",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1765281554824,
+      "tag": "0002_tan_amphibian",
+      "breakpoints": true
+    }
+  ]
+}

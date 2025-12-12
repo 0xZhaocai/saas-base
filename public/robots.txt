@@ -1,0 +1,13 @@
+# Robots.txt for SaaS Base
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /profile/
+
+# Sitemap (uncomment when available)
+# Sitemap: https://yourdomain.com/sitemap.xml
