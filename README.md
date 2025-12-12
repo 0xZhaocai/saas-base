@@ -113,11 +113,16 @@ npx wrangler versions upload
 
 参见 [.dev.vars.example](.dev.vars.example) 获取完整列表。
 
-## 📚 文档
+## 📚 文档 / Documentation
 
+**中文**:
 - [⭐ 开发指南](docs/DEVELOPMENT_GUIDE.md) - **必读**
 - [部署教程](docs/DEPLOY_TUTORIAL.md)
 - [Blog 示例模块](docs/blog/)
+
+**English**:
+- [⭐ Development Guide](docs/en/DEVELOPMENT_GUIDE.md) - **Must Read**
+- [Deployment Tutorial](docs/en/DEPLOY_TUTORIAL.md)
 
 ## 📄 License
 

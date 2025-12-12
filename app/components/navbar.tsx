@@ -28,6 +28,9 @@ const LANG_SHORT: Record<Language, string> = {
     'zh-CN': '简',
     'zh-TW': '繁',
     ja: 'JA',
+    fr: 'FR',
+    ko: '한',
+    es: 'ES',
 };
 
 export function Navbar() {
@@ -158,7 +161,7 @@ export function Navbar() {
                                 <>
                                     <div className="fixed inset-0 z-10" onClick={() => setLangMenuOpen(false)} />
                                     <div className="absolute right-0 mt-2 w-36 bg-popover rounded-lg shadow-xl border border-border py-1 z-20 overflow-hidden">
-                                        {(['en', 'zh-CN', 'zh-TW', 'ja'] as Language[]).map(lang => (
+                                        {(['en', 'fr', 'es', 'zh-CN', 'zh-TW', 'ja', 'ko'] as Language[]).map(lang => (
                                             <button
                                                 key={lang}
                                                 onClick={() => { setLanguage(lang); setLangMenuOpen(false); }}

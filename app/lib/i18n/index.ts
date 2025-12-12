@@ -10,6 +10,9 @@ import { en } from './en';
 import { zhCN } from './zh-CN';
 import { zhTW } from './zh-TW';
 import { ja } from './ja';
+import { fr } from './fr';
+import { ko } from './ko';
+import { es } from './es';
 import type { Language, I18nContent } from './types';
 
 /**
@@ -20,6 +23,9 @@ export const TRANSLATIONS: Record<Language, I18nContent> = {
     'zh-CN': zhCN,
     'zh-TW': zhTW,
     ja,
+    fr,
+    ko,
+    es,
 };
 
 /**

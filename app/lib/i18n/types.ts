@@ -1,7 +1,7 @@
 // app/lib/i18n/types.ts
 // i18n 类型定义
 
-export type Language = 'en' | 'zh-CN' | 'zh-TW' | 'ja';
+export type Language = 'en' | 'zh-CN' | 'zh-TW' | 'ja' | 'fr' | 'ko' | 'es';
 
 export interface I18nContent {
     nav: {
@@ -214,12 +214,14 @@ export interface I18nContent {
     };
 }
 
-// Language display names
 export const LANGUAGE_NAMES: Record<Language, string> = {
     en: 'English',
     'zh-CN': '简体中文',
     'zh-TW': '繁體中文',
     ja: '日本語',
+    fr: 'Français',
+    ko: '한국어',
+    es: 'Español',
 };
 
 // Get browser preferred language
@@ -230,5 +232,8 @@ export function getBrowserLanguage(): Language {
     if (browserLang.startsWith('zh-TW') || browserLang.startsWith('zh-Hant')) return 'zh-TW';
     if (browserLang.startsWith('zh')) return 'zh-CN';
     if (browserLang.startsWith('ja')) return 'ja';
+    if (browserLang.startsWith('fr')) return 'fr';
+    if (browserLang.startsWith('ko')) return 'ko';
+    if (browserLang.startsWith('es')) return 'es';
     return 'en';
 }

@@ -52,6 +52,9 @@ export function resolveLanguage(lang?: string | null): EmailLanguage {
   if (lower.startsWith("zh-tw") || lower.includes("hant")) return "zh-TW";
   if (lower.startsWith("zh")) return "zh-CN";
   if (lower.startsWith("ja")) return "ja";
+  if (lower.startsWith("fr")) return "fr";
+  if (lower.startsWith("ko")) return "ko";
+  if (lower.startsWith("es")) return "es";
   return "en";
 }
 
@@ -282,6 +285,177 @@ ${userName} さん、
 ${resetUrl}
 
 このメールに心当たりがない場合は無視してください。
+© ${year} ${appName}`,
+    },
+  },
+  fr: {
+    welcome: {
+      subject: (appName) => `🎉 Bienvenue sur ${appName} !`,
+      greet: (userName) => `Bonjour ${userName}, bienvenue !`,
+      intro: (appName) => `Merci de vous être inscrit sur ${appName}. Voici quelques fonctionnalités à explorer :`,
+      cta: "Accéder au tableau de bord",
+      footer: "Si vous avez des questions, n'hésitez pas à contacter notre équipe de support.",
+      features: [
+        "🚀 Déployez rapidement votre application",
+        "🎨 Interface utilisateur moderne",
+        "🌍 Internationalisation intégrée",
+        "🔐 Authentification sécurisée",
+      ],
+      text: (appName, userName, dashboardUrl, year) => `Bienvenue sur ${appName}, ${userName} !
+
+Accédez au tableau de bord : ${dashboardUrl}
+Pour toute question, contactez le support.
+
+© ${year} ${appName}. Tous droits réservés.`,
+    },
+    verify: {
+      subject: (appName) => `🔐 Vérifiez votre email - ${appName}`,
+      title: "Vérifiez votre adresse email",
+      greeting: (userName) => `Bonjour ${userName},`,
+      instruction: "Cliquez sur le bouton ci-dessous pour vérifier votre email et finaliser votre inscription :",
+      button: "Vérifier l'email",
+      alt: "Si le bouton ne fonctionne pas, copiez ce lien dans votre navigateur :",
+      expiry: (hours) => `⚠️ Ce lien expire dans ${hours} heures.`,
+      ignore: (appName) => `Si vous n'avez pas créé de compte sur ${appName}, vous pouvez ignorer cet email.`,
+      text: (appName, userName, verificationUrl, hours, year) => `Vérifiez votre email
+
+Bonjour ${userName},
+Ouvrez ce lien pour vérifier votre email (expire dans ${hours}h) :
+${verificationUrl}
+
+Si vous n'avez pas créé de compte sur ${appName}, ignorez cet email.
+© ${year} ${appName}`,
+    },
+    reset: {
+      subject: (appName) => `🔑 Réinitialisez votre mot de passe - ${appName}`,
+      title: "Réinitialisez votre mot de passe",
+      greeting: (userName) => `Bonjour ${userName},`,
+      instruction: "Nous avons reçu une demande de réinitialisation de votre mot de passe. Cliquez sur le bouton ci-dessous :",
+      button: "Réinitialiser le mot de passe",
+      alt: "Si le bouton ne fonctionne pas, copiez ce lien dans votre navigateur :",
+      expiry: (hours) => `⚠️ Ce lien expire dans ${hours} heures.`,
+      ignore: "Si vous n'avez pas demandé cette réinitialisation, vous pouvez ignorer cet email.",
+      text: (appName, userName, resetUrl, hours, year) => `Réinitialisez votre mot de passe
+
+Bonjour ${userName},
+Réinitialisez votre mot de passe ici (expire dans ${hours}h) :
+${resetUrl}
+
+Si vous n'avez pas demandé cela, ignorez cet email.
+© ${year} ${appName}`,
+    },
+  },
+  ko: {
+    welcome: {
+      subject: (appName) => `🎉 ${appName}에 오신 것을 환영합니다!`,
+      greet: (userName) => `${userName}님, 환영합니다!`,
+      intro: (appName) => `${appName}에 가입해 주셔서 감사합니다. 다음 기능들을 살펴보세요:`,
+      cta: "대시보드로 이동",
+      footer: "궁금한 점이 있으시면 언제든지 지원팀에 문의해 주세요.",
+      features: [
+        "🚀 빠른 앱 배포",
+        "🎨 현대적인 UI",
+        "🌍 다국어 지원",
+        "🔐 안전한 인증",
+      ],
+      text: (appName, userName, dashboardUrl, year) => `${appName}에 오신 것을 환영합니다, ${userName}님!
+
+대시보드 바로가기: ${dashboardUrl}
+궁금한 점은 지원팀에 문의하세요.
+
+© ${year} ${appName}. All rights reserved.`,
+    },
+    verify: {
+      subject: (appName) => `🔐 이메일 인증 - ${appName}`,
+      title: "이메일 주소 인증",
+      greeting: (userName) => `${userName}님, 안녕하세요`,
+      instruction: "아래 버튼을 클릭하여 이메일을 인증하고 가입을 완료하세요:",
+      button: "이메일 인증",
+      alt: "버튼이 작동하지 않으면 이 링크를 브라우저에 복사하세요:",
+      expiry: (hours) => `⚠️ 이 링크는 ${hours}시간 후 만료됩니다.`,
+      ignore: (appName) => `${appName}에 가입하지 않으셨다면 이 이메일을 무시하세요.`,
+      text: (appName, userName, verificationUrl, hours, year) => `이메일 인증
+
+${userName}님,
+이메일 인증 링크 (${hours}시간 내 유효):
+${verificationUrl}
+
+${appName}에 가입하지 않으셨다면 이 이메일을 무시하세요.
+© ${year} ${appName}`,
+    },
+    reset: {
+      subject: (appName) => `🔑 비밀번호 재설정 - ${appName}`,
+      title: "비밀번호 재설정",
+      greeting: (userName) => `${userName}님, 안녕하세요`,
+      instruction: "비밀번호 재설정 요청을 받았습니다. 아래 버튼을 클릭하여 새 비밀번호를 설정하세요:",
+      button: "비밀번호 재설정",
+      alt: "버튼이 작동하지 않으면 이 링크를 브라우저에 복사하세요:",
+      expiry: (hours) => `⚠️ 이 링크는 ${hours}시간 후 만료됩니다.`,
+      ignore: "요청하지 않으셨다면 이 이메일을 무시하세요.",
+      text: (appName, userName, resetUrl, hours, year) => `비밀번호 재설정
+
+${userName}님,
+비밀번호 재설정 링크 (${hours}시간 내 유효):
+${resetUrl}
+
+요청하지 않으셨다면 이 이메일을 무시하세요.
+© ${year} ${appName}`,
+    },
+  },
+  es: {
+    welcome: {
+      subject: (appName) => `🎉 ¡Bienvenido a ${appName}!`,
+      greet: (userName) => `¡Hola ${userName}, bienvenido!`,
+      intro: (appName) => `Gracias por registrarte en ${appName}. Aquí hay algunas cosas que puedes explorar:`,
+      cta: "Ir al panel",
+      footer: "Si tienes alguna pregunta, no dudes en contactar a nuestro equipo de soporte.",
+      features: [
+        "🚀 Despliega tu app rápidamente",
+        "🎨 Interfaz moderna",
+        "🌍 Internacionalización integrada",
+        "🔐 Autenticación segura",
+      ],
+      text: (appName, userName, dashboardUrl, year) => `¡Bienvenido a ${appName}, ${userName}!
+
+Accede al panel: ${dashboardUrl}
+Si tienes preguntas, contacta al soporte.
+
+© ${year} ${appName}. Todos los derechos reservados.`,
+    },
+    verify: {
+      subject: (appName) => `🔐 Verifica tu correo - ${appName}`,
+      title: "Verifica tu dirección de correo",
+      greeting: (userName) => `Hola ${userName},`,
+      instruction: "Haz clic en el botón de abajo para verificar tu correo y completar tu registro:",
+      button: "Verificar correo",
+      alt: "Si el botón no funciona, copia este enlace en tu navegador:",
+      expiry: (hours) => `⚠️ Este enlace expira en ${hours} horas.`,
+      ignore: (appName) => `Si no te registraste en ${appName}, puedes ignorar este correo.`,
+      text: (appName, userName, verificationUrl, hours, year) => `Verifica tu correo
+
+Hola ${userName},
+Abre este enlace para verificar tu correo (expira en ${hours}h):
+${verificationUrl}
+
+Si no te registraste en ${appName}, ignora este correo.
+© ${year} ${appName}`,
+    },
+    reset: {
+      subject: (appName) => `🔑 Restablece tu contraseña - ${appName}`,
+      title: "Restablece tu contraseña",
+      greeting: (userName) => `Hola ${userName},`,
+      instruction: "Recibimos una solicitud para restablecer tu contraseña. Haz clic en el botón de abajo:",
+      button: "Restablecer contraseña",
+      alt: "Si el botón no funciona, copia este enlace en tu navegador:",
+      expiry: (hours) => `⚠️ Este enlace expira en ${hours} horas.`,
+      ignore: "Si no solicitaste esto, puedes ignorar este correo.",
+      text: (appName, userName, resetUrl, hours, year) => `Restablece tu contraseña
+
+Hola ${userName},
+Restablece tu contraseña aquí (expira en ${hours}h):
+${resetUrl}
+
+Si no solicitaste esto, ignora este correo.
 © ${year} ${appName}`,
     },
   },
