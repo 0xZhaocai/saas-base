@@ -12,8 +12,9 @@
 # Better-Auth 认证配置
 # -------------------------------------------
 
-# 认证密钥 (用于签名 token，生成命令: openssl rand -base64 32)
-BETTER_AUTH_SECRET=your-secret-key-here
+# 认证密钥 (用于签名 token，至少 32 个字符)
+# ⚠️ 必须替换！使用命令生成: openssl rand -base64 32
+BETTER_AUTH_SECRET=REPLACE_ME_WITH_RANDOM_SECRET_32CHARS
 
 # 应用 URL (本地开发)
 BETTER_AUTH_URL=http://localhost:5173
