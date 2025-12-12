@@ -191,6 +191,14 @@ export const ja: I18nContent = {
         setPasswordFirst: 'Google連携を解除する前にパスワードを設定してください。',
         unlinkFailed: '解除に失敗しました。再度お試しください。',
         setPasswordFailed: 'パスワードの設定に失敗しました。再度お試しください。',
+        // Set password for social login users
+        setPasswordHint: 'パスワードを設定するとメールでログインできます',
+        setPasswordBtn: 'パスワードを設定',
+        newPasswordLabel: '新しいパスワード',
+        newPasswordPlaceholder: '新しいパスワードを入力',
+        confirmPasswordLabel: 'パスワードを確認',
+        confirmPasswordPlaceholder: 'パスワードを再入力',
+        passwordRequired: 'パスワードを入力してください',
     },
     blog: {
         title: 'ブログ',

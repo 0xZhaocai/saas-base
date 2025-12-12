@@ -191,6 +191,14 @@ export const zhTW: I18nContent = {
         setPasswordFirst: '請先設置密碼後再解綁 Google 帳號。',
         unlinkFailed: '解綁失敗，請重試。',
         setPasswordFailed: '設置密碼失敗，請重試。',
+        // Set password for social login users
+        setPasswordHint: '設置密碼後可以使用郵箱登入',
+        setPasswordBtn: '設置密碼',
+        newPasswordLabel: '新密碼',
+        newPasswordPlaceholder: '輸入新密碼',
+        confirmPasswordLabel: '確認密碼',
+        confirmPasswordPlaceholder: '再次輸入密碼',
+        passwordRequired: '請輸入密碼',
     },
     blog: {
         title: '部落格',

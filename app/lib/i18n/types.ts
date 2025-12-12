@@ -191,6 +191,14 @@ export interface I18nContent {
         setPasswordFirst: string;
         unlinkFailed: string;
         setPasswordFailed: string;
+        // Set password for social login users
+        setPasswordHint: string;
+        setPasswordBtn: string;
+        newPasswordLabel: string;
+        newPasswordPlaceholder: string;
+        confirmPasswordLabel: string;
+        confirmPasswordPlaceholder: string;
+        passwordRequired: string;
     };
     blog: {
         title: string;

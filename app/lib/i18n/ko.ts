@@ -190,6 +190,14 @@ export const ko: I18nContent = {
         setPasswordFirst: 'Google 연결을 해제하기 전에 비밀번호를 설정하세요.',
         unlinkFailed: '연결 해제에 실패했습니다. 다시 시도하세요.',
         setPasswordFailed: '비밀번호 설정에 실패했습니다. 다시 시도하세요.',
+        // Set password for social login users
+        setPasswordHint: '비밀번호를 설정하면 이메일로 로그인할 수 있습니다',
+        setPasswordBtn: '비밀번호 설정',
+        newPasswordLabel: '새 비밀번호',
+        newPasswordPlaceholder: '새 비밀번호 입력',
+        confirmPasswordLabel: '비밀번호 확인',
+        confirmPasswordPlaceholder: '비밀번호 다시 입력',
+        passwordRequired: '비밀번호를 입력하세요',
     },
     blog: {
         title: '블로그',

@@ -190,6 +190,14 @@ export const fr: I18nContent = {
         setPasswordFirst: 'Veuillez définir un mot de passe avant de dissocier Google.',
         unlinkFailed: 'Échec de la dissociation. Veuillez réessayer.',
         setPasswordFailed: 'Échec de la définition du mot de passe. Veuillez réessayer.',
+        // Set password for social login users
+        setPasswordHint: 'Définissez un mot de passe pour activer la connexion par email',
+        setPasswordBtn: 'Définir le mot de passe',
+        newPasswordLabel: 'Nouveau mot de passe',
+        newPasswordPlaceholder: 'Entrez le nouveau mot de passe',
+        confirmPasswordLabel: 'Confirmer le mot de passe',
+        confirmPasswordPlaceholder: 'Ressaisissez le mot de passe',
+        passwordRequired: 'Veuillez entrer le mot de passe',
     },
     blog: {
         title: 'Blog',

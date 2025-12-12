@@ -190,6 +190,14 @@ export const es: I18nContent = {
         setPasswordFirst: 'Por favor establece una contraseña antes de desvincular Google.',
         unlinkFailed: 'Error al desvincular. Por favor intenta de nuevo.',
         setPasswordFailed: 'Error al establecer la contraseña. Por favor intenta de nuevo.',
+        // Set password for social login users
+        setPasswordHint: 'Establece una contraseña para habilitar el inicio de sesión por correo',
+        setPasswordBtn: 'Establecer contraseña',
+        newPasswordLabel: 'Nueva contraseña',
+        newPasswordPlaceholder: 'Ingresa la nueva contraseña',
+        confirmPasswordLabel: 'Confirmar contraseña',
+        confirmPasswordPlaceholder: 'Vuelve a ingresar la contraseña',
+        passwordRequired: 'Por favor ingresa la contraseña',
     },
     blog: {
         title: 'Blog',

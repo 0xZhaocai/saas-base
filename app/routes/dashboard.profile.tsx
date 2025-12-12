@@ -185,12 +185,12 @@ export default function ProfilePage() {
 
         // Validate passwords
         if (!newPassword || !confirmNewPassword) {
-            setPasswordError("请输入密码");
+            setPasswordError(t.profile.passwordRequired);
             return;
         }
 
         if (newPassword !== confirmNewPassword) {
-            setPasswordError("两次密码不一致");
+            setPasswordError(t.errors.passwordMismatch);
             return;
         }
 
@@ -606,7 +606,7 @@ export default function ProfilePage() {
                         <CardTitle>{t.profile.security}</CardTitle>
                     </div>
                     <CardDescription>
-                        {hasPassword ? t.profile.changePassword : "设置密码后可以使用邮箱登录"}
+                        {hasPassword ? t.profile.changePassword : t.profile.setPasswordHint}
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -700,13 +700,13 @@ export default function ProfilePage() {
                         // Set Password Form (for Google users without password)
                         <>
                             <div className="space-y-2">
-                                <Label htmlFor="newPassword">新密码</Label>
+                                <Label htmlFor="newPassword">{t.profile.newPasswordLabel}</Label>
                                 <Input
                                     id="newPassword"
                                     type="password"
                                     value={newPassword}
                                     onChange={(e) => setNewPassword(e.target.value)}
-                                    placeholder="输入新密码"
+                                    placeholder={t.profile.newPasswordPlaceholder}
                                 />
 
                                 {/* Password strength indicators */}
@@ -733,13 +733,13 @@ export default function ProfilePage() {
                             </div>
 
                             <div className="space-y-2">
-                                <Label htmlFor="confirmNewPassword">确认密码</Label>
+                                <Label htmlFor="confirmNewPassword">{t.profile.confirmPasswordLabel}</Label>
                                 <Input
                                     id="confirmNewPassword"
                                     type="password"
                                     value={confirmNewPassword}
                                     onChange={(e) => setConfirmNewPassword(e.target.value)}
-                                    placeholder="再次输入密码"
+                                    placeholder={t.profile.confirmPasswordPlaceholder}
                                 />
 
                                 {/* Password match indicator */}
@@ -763,7 +763,7 @@ export default function ProfilePage() {
                             {passwordSuccess && (
                                 <div className="flex items-center gap-2 p-3 rounded-lg bg-green-100 dark:bg-green-900/20 text-green-600 dark:text-green-400">
                                     <Check className="h-4 w-4 flex-shrink-0" />
-                                    <span className="text-sm">密码设置成功！现在可以使用邮箱密码登录</span>
+                                    <span className="text-sm">{t.profile.passwordUpdated}</span>
                                 </div>
                             )}
 
@@ -771,7 +771,7 @@ export default function ProfilePage() {
                                 onClick={handleSetPassword}
                                 disabled={savingPassword || !newPassword || !confirmNewPassword || !isPasswordValid}
                             >
-                                {savingPassword ? t.common.loading : "设置密码"}
+                                {savingPassword ? t.common.loading : t.profile.setPasswordBtn}
                             </Button>
                         </>
                     )}

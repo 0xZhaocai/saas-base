@@ -191,6 +191,14 @@ export const zhCN: I18nContent = {
         setPasswordFirst: '请先设置密码后再解绑 Google 账号。',
         unlinkFailed: '解绑失败，请重试。',
         setPasswordFailed: '设置密码失败，请重试。',
+        // Set password for social login users
+        setPasswordHint: '设置密码后可以使用邮箱登录',
+        setPasswordBtn: '设置密码',
+        newPasswordLabel: '新密码',
+        newPasswordPlaceholder: '输入新密码',
+        confirmPasswordLabel: '确认密码',
+        confirmPasswordPlaceholder: '再次输入密码',
+        passwordRequired: '请输入密码',
     },
     blog: {
         title: '博客',

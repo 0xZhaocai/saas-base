@@ -191,6 +191,14 @@ export const en: I18nContent = {
         setPasswordFirst: 'Please set a password before unlinking Google.',
         unlinkFailed: 'Failed to unlink. Please try again.',
         setPasswordFailed: 'Failed to set password. Please try again.',
+        // Set password for social login users
+        setPasswordHint: 'Set a password to enable email login',
+        setPasswordBtn: 'Set Password',
+        newPasswordLabel: 'New Password',
+        newPasswordPlaceholder: 'Enter new password',
+        confirmPasswordLabel: 'Confirm Password',
+        confirmPasswordPlaceholder: 'Re-enter password',
+        passwordRequired: 'Please enter password',
     },
     blog: {
         title: 'Blog',
